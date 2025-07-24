@@ -66,59 +66,79 @@ const EmblaCarousel = () => {
   return (
     <Box sx={{ mt: 4, px: pxToRem(isMobile ? 16 : 40) }}>
       <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
-        <IconButton
-          onClick={scrollPrev}
-          disabled={!canScroll.prev}
-          sx={{
-            width: 40,
-            height: 40,
-            boxShadow: 2,
-            flexShrink: 0,
-            bgcolor: "white",
-          }}
-        >
-          <ArrowBackIosNewIcon fontSize="small" />
-        </IconButton>
-
-        <Box ref={emblaRef} sx={{ width: "100%", overflow: "hidden" }}>
-          <Box
-            className="embla__container"
+        {products.length > 0 && (
+          <IconButton
+            onClick={scrollPrev}
+            disabled={!canScroll.prev}
             sx={{
-              px: 1,
-              gap: 2,
-              display: "flex",
-              py: 1,
+              width: 40,
+              height: 40,
+              boxShadow: 2,
+              flexShrink: 0,
+              bgcolor: "white",
             }}
           >
-            {products.map((product) => (
-              <Box
-                key={product.id}
-                className="embla__slide"
-                sx={{
-                  flex: "0 0 auto",
-                  width: "fit-content",
-                  maxWidth: "fit-content",
-                }}
-              >
-                <ProductCard product={product} />
-              </Box>
-            ))}
+            <ArrowBackIosNewIcon fontSize="small" />
+          </IconButton>
+        )}
+        {products.length > 0 && (
+          <Box ref={emblaRef} sx={{ width: "100%", overflow: "hidden" }}>
+            <Box
+              className="embla__container"
+              sx={{
+                px: 1,
+                gap: 2,
+                display: "flex",
+                py: 1,
+              }}
+            >
+              {products &&
+                products.map((product) => (
+                  <Box
+                    key={product.id}
+                    className="embla__slide"
+                    sx={{
+                      flex: "0 0 auto",
+                      width: "fit-content",
+                      maxWidth: "fit-content",
+                    }}
+                  >
+                    <ProductCard product={product} />
+                  </Box>
+                ))}
+            </Box>
           </Box>
-        </Box>
-
-        <IconButton
-          onClick={scrollNext}
-          disabled={!canScroll.next}
-          sx={{
-            width: 40,
-            height: 40,
-            boxShadow: 2,
-            flexShrink: 0,
-            bgcolor: "white",
-          }}
-        >
-          <ArrowForwardIosIcon fontSize="small" />
-        </IconButton>
+        )}
+        {products.length === 0 && (
+          <Box
+            sx={{
+              width: "100%",
+              height: "300px",
+              display: "flex",
+              alignItems: "center",
+              fontSize: pxToRem(24),
+              fontFamily: "sans-serif",
+              justifyContent: "center",
+            }}
+          >
+            No result
+          </Box>
+        )}
+        {products.length > 0 && (
+          <IconButton
+            onClick={scrollNext}
+            disabled={!canScroll.next}
+            sx={{
+              width: 40,
+              height: 40,
+              boxShadow: 2,
+              flexShrink: 0,
+              bgcolor: "white",
+            }}
+          >
+            <ArrowForwardIosIcon fontSize="small" />
+          </IconButton>
+        )}{" "}
       </Box>
     </Box>
   );
