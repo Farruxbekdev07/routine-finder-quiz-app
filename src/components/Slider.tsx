@@ -54,8 +54,8 @@ const EmblaCarousel = () => {
     if (!emblaApi) return;
 
     emblaApi.on("select", updateScrollButtons);
-    emblaApi.on("reInit", updateScrollButtons); // Important for resize or new data
-    updateScrollButtons(); // Trigger after embla is ready
+    emblaApi.on("reInit", updateScrollButtons);
+    updateScrollButtons();
 
     return () => {
       emblaApi.off("select", updateScrollButtons);

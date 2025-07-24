@@ -92,7 +92,7 @@ export default function Quiz() {
             }}
           >
             {data[0]?.options.map((option, index) => {
-              const letter = String.fromCharCode(97 + index); // 97 = "a"
+              const letter = String.fromCharCode(97 + index);
               return (
                 <Button
                   key={option}

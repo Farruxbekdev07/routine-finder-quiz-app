@@ -10,7 +10,7 @@
 }
 
 .embla__slide {
-  flex: 0 0 33.3333%; /* 3 slides per view */
+  flex: 0 0 33.3333%;
   min-width: 0;
   background: #ddd;
   border-radius: 8px;

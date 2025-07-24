@@ -1,4 +1,3 @@
-// src/app/rootReducer.ts
 import { persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { combineReducers } from "@reduxjs/toolkit";

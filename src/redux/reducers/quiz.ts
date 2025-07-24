@@ -1,4 +1,3 @@
-// src/features/quiz/quizSlice.ts
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 import type { ANSWER_PROPS } from "../../types/answer";

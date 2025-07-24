@@ -1,69 +1,69 @@
-# React + TypeScript + Vite
+# 🧠 Routine Finder Quiz App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and interactive quiz application to help users discover a routine or product recommendation based on their answers.
 
-Currently, two official plugins are available:
+## 📸 Preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The app uses a visually engaging interface with a background image and slider-based interaction.
 
-## Expanding the ESLint configuration
+## 🚀 Live Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**🔗 [Click here to try the app](https://routine-finder-quiz-app.vercel.app/)**
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🚀 Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- 📝 Multiple-choice quiz
+- 🧮 Redux-based global state management
+- 💾 Wishlist feature
+- 📊 Results page with personalized suggestions
+- 🔄 Reusable UI components (Card, Button, Slider, etc.)
+- 💅 Custom styling and CSS Embla carousel integration
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📁 Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+routine-finder-quiz-app/
+├── public/ # Static files and assets
+├── src/
+│ ├── assets/ # Images and static resources
+│ ├── components/ # Reusable UI components
+│ ├── constants/ # Static constants
+│ ├── data/ # Static or mock quiz data
+│ ├── pages/ # Page-level components
+│ ├── redux/ # Redux store, slices, and persist config
+│ ├── routes/ # React Router DOM configuration
+│ ├── service/ # API services (if any)
+│ ├── styles/ # Global and modular styles
+│ ├── types/ # TypeScript type definitions
+│ └── utils/ # Helper utility functions
+├── App.tsx # Root component
+├── main.tsx # App entry point
+├── theme.ts # MUI theme setup
+├── vite-env.d.ts # TypeScript Vite types
+├── .env # Environment variables
+├── vite.config.ts # Vite configuration
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🛠️ Tech Stack
+
+- React + TypeScript
+- Redux Toolkit
+- CSS Modules / Custom styles
+- Embla Carousel
+- Vite (or CRA, depending on setup)
+
+---
+
+## 🧪 Running Locally
+
+```bash
+git clone https://github.com/Farruxbekdev07/routine-finder-quiz-app
+cd routine-finder-quiz-app
+npm install
+npm run dev
+
+🙋‍♂️ Author
+Created by Farrukhbek Mirzakulov
 ```
