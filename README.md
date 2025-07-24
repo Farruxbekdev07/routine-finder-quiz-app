@@ -8,7 +8,7 @@ The app uses a visually engaging interface with a background image and slider-ba
 
 ## 🚀 Live Demo
 
-**🔗 [Click here to try the app](https://routine-finder-quiz-app.vercel.app/)**
+**🔗 [Click here to try the app](https://routine-finder-quiz-app.netlify.app)**
 
 ## 🚀 Features
 
