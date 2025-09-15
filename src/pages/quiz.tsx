@@ -112,6 +112,7 @@ export default function Quiz() {
               variant="contained"
               onClick={handleNext}
               endIcon={<ArrowForwardIcon />}
+              disabled={Boolean(!selected)}
             >
               {step === TOTAL_STEPS ? "Discover your results" : "Next question"}
             </Button>
